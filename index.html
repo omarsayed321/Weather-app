@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather</title>
+
+		<!-- fonts -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+
+		<!-- icons -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<!-- style -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="position-relative">
+		<!-- navbar -->
+
+		<nav id="navbar" class="navbar navbar-expand-lg position-relative z-3">
+			<div class="container py-5">
+				<div
+					class="logo d-flex flex-row align-content-center align-items-center">
+					<img src="img/logo.png" alt="logo" />
+					<div class="logo-text d-flex flex-column ms-2">
+						<a class="navbar-brand p-0" href="#home">Weather</a>
+						<span>tagline goes here</span>
+					</div>
+				</div>
+
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav text-capitalize ms-auto nav-animation">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#home"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">News</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Live cameras</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Photos</a>
+						</li>
+						<li class="nav-item" id="contact">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- search -->
+
+		<section id="search" class="align-content-center">
+			<div class="container">
+				<div class="input-group mb-3">
+					<input
+						id="searchInput"
+						type="text"
+						class="form-control position-relative rounded-5 py-3 z-1"
+						placeholder="Find Your Location..."
+						aria-label="Find Your Location..." />
+
+					<button
+						id="findBtn"
+						type="button"
+						class="btn btn-primary z-5 position-absolute rounded-5 px-5 py-2">
+						Find
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- weather container -->
+
+		<div id="weather">
+			<div class="container py-5">
+				<div class="row">
+					<div class="col-lg-4 today-weather p-0">
+						<!-- current day status -->
+
+						<div
+							class="today-weather-header w-100 d-flex justify-content-between p-3 py-2">
+							<div class="dayName today"></div>
+							<div class="date"></div>
+						</div>
+
+						<div class="weather-content p-3">
+							<div id="cityName" class="loc"></div>
+							<div class="degree">
+								<div id="temp_c" class="num d-inline-block">
+									
+								</div>
+								<sup class="m-0">o</sup>
+								C
+							</div>
+							<div class="img "></div>
+							<div id="currentStatus" class="status mb-3"></div>
+							<span
+								><img src="img/icon-umberella.png" alt="umberella" />
+								20%</span
+							>
+							<span><img src="img/icon-wind.png" alt="wind" /> 20%</span>
+							<span
+								><img src="img/icon-compass.png" alt="compass" />
+								20%</span
+							>
+						</div>
+					</div>
+
+					<!-- 2nd day status -->
+
+					<div class="col-lg-4 tmrw-weather p-0 text-center">
+						<div class="dayName tmrw-weather-header w-100 py-2"></div>
+
+						<div class="weather-content p-3 text-white my-5">
+							<div class="img">
+							</div>
+							<div class="my-2">
+								<div class="maxTemp d-inline-block"></div>
+								<sup>o</sup>
+								C
+							</div>
+							<small>
+								<div class="minTemp d-inline-block"></div>
+								<sup>o</sup>
+							</small>
+							<div class="status mt-3 dayStatus"></div>
+						</div>
+					</div>
+
+					<!-- 3rd day status -->
+
+					<div class="col-lg-4 third-weather p-0 text-center">
+						<div class="dayName third-weather-header w-100 py-2"></div>
+
+						<div class="weather-content p-3 text-white my-5">
+							<div class="img">
+							</div>
+							<div class="my-2">
+								<div class="maxTemp d-inline-block"></div>
+								<sup>o</sup>
+								C
+							</div>
+							<div>
+								<div class="minTemp d-inline-block"></div>
+								<sup>o</sup>
+							</div>
+							<div class="status mt-3 dayStatus"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+
+		<footer id="footer">
+			<div class="container py-5">
+				<div class="d-flex justify-content-between">
+					<div class="input-group mb-3">
+						<input
+							type="text"
+							class="form-control position-relative rounded-5 py-3 z-1"
+							placeholder="Enter Your Email To Subscribe"
+							aria-label="Enter Your Email To Subscribe" />
+
+						<button
+							type="button"
+							class="btn btn-primary z-5 position-absolute rounded-5 px-3 py-2">
+							Subscribe
+						</button>
+					</div>
+					<div class="footer-icon align-content-center">
+						<a href="#"><i class="fa-facebook-f fa-brands"></i></a>
+						<a href="#"><i class="fa-twitter fa-brands"></i></a>
+						<a href="#"><i class="fa-google-plus fa-brands"></i></a>
+						<a href="#"><i class="fa-pinterest fa-brands"></i></a>
+					</div>
+				</div>
+				<span
+					>Copyright 2014 Company name. Designed by Themezy. All rights
+					reserved</span
+				>
+			</div>
+		</footer>
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

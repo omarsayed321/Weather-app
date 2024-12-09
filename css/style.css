@@ -1,0 +1,204 @@
+/* global */
+
+:root {
+	--main-font: "Roboto", sans-serif;
+
+	--main-color: #1e202b;
+	--primary-color: #262936;
+	--sec-color: #009ad8;
+	--third-color: #2D303D;
+	--text-color: #bfc1c8;
+}
+
+body {
+	color: var(--text-color);
+	font-family: var(--main-font);
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.bg-color{
+	background-color: var(--main-color);
+}
+
+/* navbar */
+
+#navbar {
+	background-color: var(--main-color);
+}
+.logo {
+	width: 10%;
+}
+.logo img {
+	width: 50%;
+	height: 50%;
+	object-fit: fill;
+}
+.logo-text a {
+	font-size: 18px;
+}
+.logo-text span {
+	font-size: 10px;
+	color: var(--text-color);
+}
+.navbar-brand {
+	color: white;
+}
+.navbar-brand:hover {
+	color: white;
+}
+.navbar-nav .nav-item .nav-link {
+	color: white;
+	padding: 0 25px;
+}
+.nav-item {
+	padding: 0 8px;
+}
+.navbar-nav .nav-link {
+	font-size: 14px;
+}
+.navbar-nav .nav-link:hover {
+	border: 2px solid var(--sec-color);
+	border-radius: 20px;
+	color: var(--sec-color);
+}
+.navbar-nav .nav-link.active {
+	border: 2px solid var(--sec-color);
+	border-radius: 20px;
+	color: var(--sec-color);
+}
+
+.navbar-toggler {
+	border: 0;
+	border-radius: 0;
+	color: var(--sec-color);
+}
+.navbar-toggler:hover {
+	border: 2px solid var(--sec-color);
+	border-radius: 20px;
+	color: var(--sec-color);
+}
+.navbar-toggler:focus {
+	text-decoration: none;
+	outline: 0;
+	box-shadow: 0 0 0 ;
+}
+.navbar-toggler-icon{
+	color: white;
+}
+.navbar-toggler-icon:hover{
+	color: var(--sec-color)	;
+}
+
+/* search */
+
+#search {
+	min-height: 250px;
+	padding: 50px 0;
+	background-image: linear-gradient(
+			rgba(1, 1, 1, 0.292),
+			rgba(10, 10, 10, 0.277)
+		),
+		url(../img/banner.png);
+	background-size: cover;
+	overflow: visible;
+}
+
+.form-control {
+	background-color: var(--main-color);
+	border: 0;
+	border-radius: 40px;
+	color: white;
+	padding: 15px 15px;
+}
+.form-control:focus {
+	background-color: var(--main-color);
+	color: white;
+	border-color: inherit;
+	box-shadow: 0 0 0;
+}
+.input-group input::placeholder {
+	color: var(--text-color);
+	font-size: 14px;
+}
+.btn {
+	right: 1%;
+	top: 13%;
+	font-size: 14px;
+}
+.form-control:focus .btn {
+	z-index: 4;
+}
+
+/* weather container style */
+
+#weather{
+	background-color: var(--main-color);
+}
+
+/* today weather */
+.today-weather{
+	background-color: #323544;
+}
+.today-weather-header{
+	background-color: var(--third-color);
+}
+.degree{
+	font-size: 70px;
+	font-weight: 600;
+	color: white;
+}
+.status{
+	color: var(--sec-color);
+	font-size: 14px;
+}
+
+/* tmrw-weather */
+.tmrw-weather{
+	background-color: var(--primary-color);
+}
+.tmrw-weather-header{
+	background-color: #222531;
+}
+
+/* third */
+.third-weather{
+	background-color: #323544;
+}
+.third-weather-header{
+	background-color: var(--third-color);
+}
+
+/* footer */
+
+#footer{
+	background-color: var(--primary-color);
+}
+#footer .input-group{
+	width: 70%;
+}
+
+.service-icon-circle {
+	color: #f4f4f4;
+	transition: all 0.3s ease-in-out;
+}
+.service-icon {
+	color: var(--main-color);
+	transition: all 0.3s ease-in-out;
+}
+#footer .footer-icon a{
+	background-color: var(--main-color);
+	color: var(--sec-color);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	padding: 14px 15px;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+#footer .footer-icon a:hover{
+	background-color: var(--sec-color);
+	color: white;
+
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>contact</title>
+
+		<!-- fonts -->
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+
+		<!-- icons -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+
+		<!-- style -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/contact.css" />
+	</head>
+	<body class="bg-color">
+		<!-- navbar -->
+
+		<nav id="navbar" class="navbar navbar-expand-lg">
+			<div class="container py-5">
+				<div
+					class="logo d-flex flex-row align-content-center align-items-center">
+					<img src="img/logo.png" alt="logo" />
+					<div class="logo-text d-flex flex-column ms-2">
+						<a class="navbar-brand p-0" href="#home">Weather</a>
+						<span>tagline goes here</span>
+					</div>
+				</div>
+
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav text-capitalize ms-auto nav-animation">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#home"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">News</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Live cameras</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Photos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- header -->
+
+		<section class="mb-5">
+			<div class="container">
+				<div class="header py-3 rounded-5 ps-4">
+					<a id="home" href="#home">Home</a>
+					<i class="fa-solid fa-arrow-right fa-xs"></i>
+					<span>Contact</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- contact -->
+
+		<div id="contact" class="container my-5">
+			<div class="row">
+				<div class="col-sm-5">
+					<div class="contact-left mt-5">
+						<div>
+							<span class="text-center">
+								<i class="fa-solid fa-location-dot"></i>
+								Company Name INC. <br />
+								2803 Avenue Street, Los Angeles
+							</span>
+						</div>
+						<span>
+							<i class="fa-solid fa-phone"></i>
+							+1 800 314 235
+						</span>
+						<span>
+							<i class="fa-solid fa-envelope"></i>
+							contact@companyname.com
+						</span>
+					</div>
+				</div>
+
+				<div class="col-sm-6 ms-auto">
+					<div class="contact-right">
+						<header>
+							<h2>Contact Us</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing
+								elit. Commodi consectetur inventore ducimus, facilis,
+								numquam id soluta omnis eius recusandae nesciunt vero
+								repellat harum cum. Nisi facilis odit hic, ipsum sed!
+							</p>
+
+                     <input
+                        type="text"
+                        id="exampleFormControlInput1"
+                        placeholder="Your Name..." />
+                     <input
+                        type="email"
+                        id="exampleFormControlInput1"
+                        placeholder="Your Email Addres..." />
+                     <input
+                        type="text"
+                        id="exampleFormControlInput1"
+                        placeholder="Company Name..." />
+                     <input
+                        type="text"
+                        id="exampleFormControlInput1"
+                        placeholder="Website..." />
+
+                     <textarea placeholder="Message..."></textarea>
+						</header>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+
+		<footer id="footer">
+			<div class="container py-5">
+				<div class="d-flex justify-content-between">
+					<div class="input-group mb-3">
+						<input
+							type="text"
+							class="form-control position-relative rounded-5 py-3 z-1"
+							placeholder="Enter Your Email To Subscribe"
+							aria-label="Enter Your Email To Subscribe" />
+
+						<button
+							type="button"
+							class="btn btn-primary z-5 position-absolute rounded-5 px-3 py-2">
+							Subscribe
+						</button>
+					</div>
+					<div class="footer-icon align-content-center">
+						<a href="#"><i class="fa-facebook-f fa-brands"></i></a>
+						<a href="#"><i class="fa-twitter fa-brands"></i></a>
+						<a href="#"><i class="fa-google-plus fa-brands"></i></a>
+						<a href="#"><i class="fa-pinterest fa-brands"></i></a>
+					</div>
+				</div>
+				<span
+					>Copyright 2014 Company name. Designed by Themezy. All rights
+					reserved</span
+				>
+			</div>
+		</footer>
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/contact.js"></script>
+	</body>
+</html>
