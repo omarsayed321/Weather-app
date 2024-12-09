@@ -1,5 +1,6 @@
 // declartion
 const apiKey = "cbb77d607f0b4ecab2c173140240512";
+const locApiKey = "c6bd44955027e31af69be6b20c4873c1";
 let contact = document.getElementById("contact");
 let searchInput = document.getElementById("searchInput");
 let findBtn = document.getElementById("findBtn");
@@ -16,7 +17,9 @@ let currentDate = document.querySelector(".date");
 // display user current loc
 
 (async function () {
-	let cityResponse = await fetch(`http://ip-api.com/json/?fields=61439`);
+	let cityResponse = await fetch(
+		`https://api.ipapi.com/check?access_key=${locApiKey}`
+	);
 	let cityData = await cityResponse.json();
 	let city = cityData.city;
 	let response2 = await fetch(
